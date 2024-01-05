@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet of Things</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+
+    <!---Set up for grid, "Container" class is the Parent-->
+    <div class = "container" id="container">
+
+        <div class="header">
+            <nav>
+                <a href="home.html" class = "logo">
+                    <img src="media/logo.png" alt="company logo">
+                </a>
+                <!--Only Visible at Smaller Screen Size-->
+                <div class="hamburger" id="hamburger-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <!---Visible at Larger Screen Size-->
+                <ul id="nav-menu">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="future-trends.html">Future Trends</a></li>
+                    <li id="contact"><a href="contact.html">Contact</a></li>
+                </ul>
+                </nav>
+
+                <!-----Visible when hamburger is clicked on-->
+                <div class = "slide-out" id="slideout">
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="future-trends.html">Future Trends</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        <!------"Main" grid item will always take up full row at any size-->
+        <div class = "main">
+            <video autoplay muted loop id="background-video">
+                <source src="media/earth.mp4" type="video/mp4">
+            </video>
+            <div class = 'slogan' id = "slo">
+                <h1>The Internet of Things</h1>
+                <h4>Bridging the Gap Between Digital and Physical</h4>
+                <div class="learn-more">
+                </div>
+            </div>
+            <div id = 'city'>
+                    <img src = 'media/city.jpg' id ="city_pic">
+                <div id = 'city-text'>
+                    <div>
+                        <h2>Smarter Cities, Smarter World.</h2>
+                        <div id="disappearing-text">
+                            <p>The future is yesterday. The world blinked, and suddenly information was everywhere. Homes shared with robot assistants, small businesses relying on big data — <em>How did this all happen?</em> —
+                            Here you will learn how IoT facilitates a seamless integration and communication between the digital and physical world, and how it drastically impacts the way we live and learn.
+                            </p>
+                            <div id="discover-container">
+                                <a href="about.html" id="discover">
+                                Tell Me More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class = "c1" id ='content1'>
+            c1
+        </div>
+
+
+        <div class = "c2">
+            c2
+        </div>
+
+
+        <div class = "c3">
+            c3
+        </div>
+
+
+        <div class ="c4">
+            c4
+        </div>
+
+
+        <div class = "footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="media/logo.png" alt="Your Logo">
+                </div>
+                <div class="footer-about">
+                    <h3>About</h3>
+                    <p></p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                </div>
+                <div class="footer-social">
+                        <h3>Social</h3>
+                        <a href="your-facebook-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="your-twitter-link"><i class="fab fa-twitter"></i></a>
+                        <a href="your-instagram-link"><i class="fab fa-instagram"></i></a>
+                        <a href="your-linkedin-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

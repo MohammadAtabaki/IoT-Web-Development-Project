@@ -1,0 +1,290 @@
+/*
+Color 1: #4E7DA6 (A shade of blue)
+Color 2: #8C98A7 (A shade of gray-blue)
+Color 3: #C7CBD1 (A light gray)
+Color 4: #F0F0F0 (A very light gray, almost white)
+Color 5: #333333 (A dark gray)
+*/
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden; /* Prevents horizontal scrolling -- important for our slideout menu bar because it takes up invisible space off to the right when it is transformed*/
+}
+/*------------------MENU BAR FOR SMALL SCREEN----------------*/
+#slideout {
+    background-color: #002030;
+    height: 100vh;
+    top: -10px;
+    width: 50vw;
+    position: absolute;
+    right: -10px;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s, opacity 0.5s, visibility 0.5s;
+}
+
+#slideout.transformed {
+  visibility: visible;
+  opacity: 0.9;
+  transform: translateX(0);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.slide-out ul {
+    list-style-type: none;
+    margin-top: 80px;
+}
+
+.slide-out li {
+    border-bottom: 2px solid black;
+    font-size: large;
+}
+
+
+.slide-out li a {
+    text-decoration: none;
+    font-size:2em;
+    color:white;
+}
+
+.slide-out li a:hover {
+    opacity: 0.4;
+}
+
+/*--------------------------------------------------------------*/
+
+
+/*---------------------GRID SET UP------------------------------*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    position:relative;
+}
+
+.header {grid-area: header}
+.main {grid-area: main}
+.c1 {grid-area: c1}
+.c2 {grid-area: c2}
+.c3 {grid-area: c3}
+.c4 {grid-area: c4}
+.footer {grid-area: footer}
+
+.container {
+    grid-template-areas:
+    "header header"
+    "main main"
+    "c1 c2"
+    "c3 c4"
+    "footer footer";
+}
+
+.main {
+    height: 90vh;
+    position: relative;
+}
+
+.c1 {
+    border: 2px dashed orange;
+}
+
+.c2 {
+    border: 2px dashed yellow;
+}
+
+.c3 {
+    border: 2px dashed green;
+}
+
+.c4 {
+    border: 2px dashed blue;
+}
+
+.footer {
+    border: 2px dashed indigo;
+}
+
+/*---------------------------------------------------------------*/
+
+
+/*----------------------HEADER-----------------------------------*/
+
+.header > nav {
+    display: flex;
+    height: 80px;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px
+}
+
+.bigNav {
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+    align-items: center;
+}
+
+#nav-menu li {
+    margin-left: 40px;
+    font-size: large;
+}
+
+#contact {
+    position:absolute;
+    right: 10%;
+    background-color:black ;
+    padding: 15px;
+    border-radius: 7px;
+}
+
+#nav-menu li a {
+    text-decoration: none;
+    font: bold;
+    color: white;
+}
+
+#nav-menu li a:hover {
+    color: white;
+    padding: 10px;
+    border-radius: 40%;
+    text-decoration: underline;
+}
+
+
+.lilNav {
+    color: pink;
+}
+
+.logo img {
+    max-height: 100%;
+    box-shadow: 0px 0px 8px white;
+    border-radius: 50%;
+}
+
+.logo img:hover{
+    box-shadow: 0px 0px 20px white;
+    max-height: 102%;
+}
+
+/*-------------------------------------------------------------------*/
+
+
+#background-video {
+    position: fixed;
+    right:0;
+    bottom:0;
+    z-index: -1;
+}
+
+
+
+
+/*---------------Media Queries for different breakpoints---------------*/
+
+@media screen and (max-width: 1000px) {
+
+    .container {
+        grid-template-areas:
+        "header header"
+        "main main"
+        "c1 c1"
+        "c2 c2"
+        "c3 c3"
+        "c4 c4"
+        "footer footer";
+    }
+
+    .hamburger {
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 10px;
+        top: 50%; /* Position from the top at 50% of parent's height */
+        transform: translateY(-50%);
+        background-color: black;
+        padding: 10px;
+        border-radius: 7px;
+        opacity: 0.9;
+        z-index: 2;
+    }
+
+    .hamburger div {
+        background-color: white;
+        height: 3px;
+        width: 100%;
+    }
+
+    .header > nav {
+        display: flex;
+        position: relative;
+    }
+
+    .hamburger:hover {
+        opacity: 0.5;
+        padding: 7px;
+    }
+}
+
+/*----------------------------------------------------------------*/
+
+
+/*-----------------------Footer-----------------*/
+
+footer {
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    opacity: 0.8;
+}
+
+.footer-logo img {
+    max-width: 120px;
+    margin: 10px;
+}
+
+.footer-about, .footer-contact, .footer-social {
+    max-width: 200px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.footer-social i {
+    color: black; /* Icon color */
+    margin: 5px; /* Spacing around icons */
+    font-size: 20px; /* Size of icons */
+}
+
+.footer-social a {
+    text-decoration: none; /* Removes underline from links */
+}
+
+/* Add any additional styling as needed */
+
+
+/* we need to make it so that when we click on the hamburger,
+the display property of the .slide-out element is set to flex.
+
+We will also have to change the property of the .container
+(whats holding all of our shit) to position: relative, because
+our slide out will have to have position: absolute to put it on top.
+we should set the opacity so we can kind of see that its
+over the content.
+
+
+Problem now -- we can only get slide out every other time we resize
+from big to small, probably because we set the slide out to dont
+display whenever its larger.

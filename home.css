@@ -1,0 +1,120 @@
+/*-----------------Main-------------------------------------------*/
+
+#city {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh
+}
+
+#city img {
+    display: block;
+    opacity: 0.9;
+    box-shadow: 0px 0px 30px 5px white;
+    border-radius: 10px;
+    width: 80%;
+    transition: box-shadow 2s ease, width 0.2s ease, border-radius 1s ease;
+}
+
+#city img.transformed {
+    box-shadow: 0px 0px 50px 20px;
+}
+
+#city img:hover {
+    width: 95%;
+    border-radius: 0px;
+}
+
+#city-text {
+    background-color: #4E7DA6;
+    color: white;
+    opacity: 0;
+    width: 60%;
+    padding: 20px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    padding-left: 50px;
+    transform:translateY(-250px);
+    visibility: hidden;
+    z-index: -1;
+    transition: transform 0.5s ease, visibility 0.5s ease, opacity 1s ease;
+}
+
+#city-text.transformed {
+    visibility: visible;
+    opacity: 0.9;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+
+
+
+#city-text div {
+    padding: 10px;
+}
+
+#city-text h2 {
+    opacity: 0.95;
+    margin-bottom: -10px;
+    margin-top: 5px;
+    text-shadow: 0px 0px 16px #002030;
+    text-align: center;
+}
+
+#city-text p {
+    margin-bottom: 20px;
+
+}
+
+#discover {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #002030;
+    color: white;
+    border-radius: 10px;
+    opacity: 0.9;
+    margin-top: -12px;
+    width: 30%;
+    text-align: center;
+}
+
+#discover:hover {
+    opacity: 0.8;
+}
+
+#discover-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/*----------------Video-------------------*/
+
+#background-video {
+    position: fixed;
+    right:0;
+    bottom:0;
+    z-index: -1;
+}
+
+.slogan {
+    color: white;
+    padding: 30px;
+    margin: 8%;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+
+
+.slogan h1:hover {
+    font-style: italic;
+}
+
+
+/* Add additional styling as needed */
+
