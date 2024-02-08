@@ -1,11 +1,18 @@
 /*-----------------Main-------------------------------------------*/
 
+
+.main {
+    height: 300vh;
+}
+
 #city {
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh
+    height: 90vh;
+    position: relative;
+    top: 20%;
 }
 
 #city img {
@@ -14,7 +21,10 @@
     box-shadow: 0px 0px 30px 5px white;
     border-radius: 10px;
     width: 80%;
+    height: 45%;
     transition: box-shadow 2s ease, width 0.2s ease, border-radius 1s ease;
+    z-index: 2;
+
 }
 
 #city img.transformed {
@@ -22,7 +32,7 @@
 }
 
 #city img:hover {
-    width: 95%;
+    width: 92%;
     border-radius: 0px;
 }
 
@@ -30,14 +40,14 @@
     background-color: #4E7DA6;
     color: white;
     opacity: 0;
-    width: 60%;
+    width: 50%;
     padding: 20px;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     padding-left: 50px;
     transform:translateY(-250px);
     visibility: hidden;
-    z-index: -1;
+    z-index: 1;
     transition: transform 0.5s ease, visibility 0.5s ease, opacity 1s ease;
 }
 
@@ -46,9 +56,12 @@
     opacity: 0.9;
     transform: translateY(0);
     transition: transform 0.5s ease;
+
 }
 
-
+#city-text a {
+    z-index: 1;
+}
 
 #city-text div {
     padding: 10px;
@@ -89,7 +102,35 @@
     justify-content: center;
 }
 
+/*-------------about--------------*/
 
+#about {
+    width: 60%;
+    margin: auto;
+    position: relative;
+    top: 30%;
+}
+
+.real_world_examples {
+    margin: 50px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px white;
+    opacity: 0.9;
+}
+
+.real_world_examples img{
+    object-fit: contain;
+    width: 100%;
+    border: 3px solid #002030
+
+}
+
+.real_world_examples div {
+    margin: 10px;
+    width: 100%
+}
 
 
 /*----------------Video-------------------*/
@@ -117,4 +158,70 @@
 
 
 /* Add additional styling as needed */
+
+
+/*--------------------------------------------------------------*/
+
+/*----------------------HEADER-----------------------------------*/
+
+.header > nav {
+    display: flex;
+    height: 80px;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px
+}
+
+.bigNav {
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+    align-items: center;
+}
+
+#nav-menu li {
+    margin-left: 40px;
+    font-size: large;
+}
+
+#contact {
+    position:absolute;
+    right: 10%;
+    background-color:black ;
+    padding: 15px;
+    border-radius: 7px;
+}
+
+#nav-menu li a {
+    text-decoration: none;
+    font: bold;
+    color: white;
+}
+
+#nav-menu li a:hover {
+    color: white;
+    padding: 10px;
+    border-radius: 40%;
+    text-decoration: underline;
+}
+
+
+.lilNav {
+    color: pink;
+}
+
+.logo img {
+    max-height: 100%;
+    box-shadow: 0px 0px 8px white;
+    border-radius: 50%;
+}
+
+.logo img:hover{
+    box-shadow: 0px 0px 20px white;
+    max-height: 102%;
+}
+
+
+
+/*-------------------------------------------------------------------*/
 

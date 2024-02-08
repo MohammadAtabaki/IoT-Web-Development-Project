@@ -2,10 +2,11 @@
 const hamburger = document.getElementById('hamburger-menu');
 const navMenu = document.getElementById('nav-menu');
 const slideout = document.getElementById("slideout");
-var slogan = document.getElementById("slo");
+
 
 // Run once on initial load
 checkScreenSize();
+homeMediaToggle();
 
 // Add event listener for window resizing
 window.addEventListener('resize', checkScreenSize);
@@ -38,7 +39,6 @@ hamburger.addEventListener('click', () => {
 });
 
 function executeForLargeScreen() {
-    document.body.style.backgroundColor = 'white';
     hamburger.style.display = 'none';
     navMenu.style.display = 'flex';
     navMenu.className = 'bigNav';
@@ -46,39 +46,42 @@ function executeForLargeScreen() {
 }
 
 
+//disappearing scroll effect
 
-var city_text = document.getElementById('city-text')
+function homeMediaToggle() {
+    const cityText = document.getElementById('city-text');
+    const slogan = document.getElementById("slo");
+    const city = document.getElementById('city');
 
-//disappearing header scroll effect
+    document.addEventListener("scroll", () => {
+        const distanceFromTop = window.scrollY;
 
-document.addEventListener("scroll", ()=> {
-    var distanceFromTop = window.scrollY;
-    if (distanceFromTop > 80) {
-        var slogan = document.getElementById("slo");
-        var city = document.getElementById('city');
-        slogan.style.display = 'none';
-        city.style.display= 'flex';
-        if (distanceFromTop > 150) {
-          city_text.classList.add("transformed")
-    } else {
-        city_text.classList.remove("transformed")
-    }
-        console.log(distanceFromTop)
-}   else {
-        var slogan = document.getElementById("slo");
-        var city = document.getElementById('city');
-        console.log(distanceFromTop);
-        slogan.style.display = 'block';
-        city.style.display = 'none';
+        // Hide slogan and show city
+        if (distanceFromTop > 100 && distanceFromTop <= 300) {
+            slogan.style.display = 'none';
+            city.style.display = 'flex';
+            cityText.classList.remove("transformed");
+        }
+        // Transform city text
+        else if (distanceFromTop > 300) {
+            cityText.classList.add("transformed");
+        }
+
+        // Default state
+        else {
+            slogan.style.display = 'block';
+            city.style.display = 'none';
+            cityText.classList.remove("transformed");
+        }
+    });
 }
-})
 
-document.addEventListener("scroll", ()=> {
-    if (slideout.classList.contains("transformed")) {
-        slideout.classList.remove("transformed")
-    }
-})
 
+
+
+
+
+//Stylistic Effects
 
 //Make homescreen main picture glow
 
@@ -89,12 +92,41 @@ function glow() {
 
 setInterval(glow,1000)
 
+// carousel for about 
 
-//To do:
-//1. Format slide-out nav items.
-//2. Add content.
-//3. Rename grid container items.
-//4. Go bare w the nav bar?
-//5. Footer
-//6. More javascript features
-//7. Add a carousel somewhere in there
+//create array with our images and text
+document.addEventListener('DOMContentLoaded', (event) => {
+    const aboutContent = [
+        {
+            img: 'https://digitalassets.tesla.com/tesla-contents/image/upload/v1687364879/powerwall-storm-watch-hero-image.jpg',
+            heading: "Tesla's Storm Watch",
+            text: "Storm Watch is a feature of Tesla's Powerwall that prepares homeowners for grid outages. Relying on internet connectivity, the Powerwall responds to severe weather alerts by allocating available grid and/or solar energy, ensuring the Powerwall get a sufficient charge to power the home during a storm."
+            },
+        {
+            img: 'https://eadn-wc01-11124015.nxedge.io/wp-content/uploads/2021/04/Google-nest-tips-1080x675.jpg',
+            heading: 'Google Nest Thermostat',
+            text: "Google's Nest Thermostat is a smart home device that regulates temperature, learns your preferences, and saves energy. It features Wi-Fi connectivity, remote control via smartphone app, and compatibility with voice assistants like Google Assistant and Alexa. Its sleek design and intuitive interface make home climate management efficient and convenient."
+        },
+        {
+            img: 'https://www.greenpm.co.uk/sites/default/files/IMG_28168989.jpg',
+            heading: 'Footbot Air Quality Monitor',
+            text: 'Footboy Air Quality Monitor is a compact device that measures indoor air quality, detecting pollutants like PM2.5, VOCs, and CO2. It provides real-time data, alerts users to unhealthy conditions, and integrates with smartphones for remote monitoring. With its user-friendly design, it helps ensure a healthier living environment.'
+        }
+        // Add more content as needed
+    ];
+
+    let currentContentIndex = 0;
+
+    const aboutImg = document.getElementById('about-img');
+    const aboutHeading = document.getElementById('about-heading');
+    const aboutText = document.getElementById('about-text');
+
+    setInterval(() => {
+        currentContentIndex = (currentContentIndex + 1) % aboutContent.length; // Cycle through the content
+        const content = aboutContent[currentContentIndex];
+        aboutImg.src = content.img;
+        aboutImg.alt = 'About Image ' + (currentContentIndex + 1);
+        aboutHeading.textContent = content.heading;
+        aboutText.textContent = content.text;
+    }, 10000); // Change content every 5 seconds
+});

@@ -1,0 +1,130 @@
+/*
+Color 1: #4E7DA6 (A shade of blue)
+Color 2: #8C98A7 (A shade of gray-blue)
+Color 3: #C7CBD1 (A light gray)
+Color 4: #F0F0F0 (A very light gray, almost white)
+Color 5: #333333 (A dark gray)
+*/
+
+/*------------------Content---------------------------------*/
+
+
+
+
+/*----------------------------Main---------------------------------*/
+.slogan {
+    color: white;
+    padding: 30px;
+    margin: 8%;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+
+
+.slogan h1:hover {
+    font-style: italic;
+}
+
+
+/*----------------------------C1---------------------------------*/
+
+
+
+.intoduction {
+    text-align: justify;
+    position: relative;
+    text-decoration: none;
+    background-color:   rgba(0, 0, 0, 0.5);
+    color: #C7CBD1;
+    padding: 20px;
+    margin-bottom: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-top: 60px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.25;
+
+}
+
+
+.art {
+    text-align: center;
+    text-decoration: none;
+    background-color:rgba(0, 0, 0, 0.5);
+    padding: 10%;
+    margin-top: 30px;
+    transition-duration: 1s;
+    margin: 10%;
+    height: 50%;
+    margin-bottom: 50px;
+    color: white;
+}
+.art:hover{
+    transform:scale(1.1);
+    -webkit-box-shadow: 5px 3px 28px 0px rgba(0,0,0,0.4); 
+    box-shadow: 5px 3px 28px 0px rgba(0,0,0,0.4);
+}
+
+
+
+.img {
+    height:200px;
+    margin:0 auto;
+    border-radius: 10%;
+}
+
+
+.btm{
+  background-color: #fff;
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.btm:hover {
+  background-color: #000000;
+}
+
+
+
+  #back-to-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color:  #4E7DA6;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    font-size: bold 20px;
+}
+
+#back-to-top-button:hover {
+    opacity: 0.8;
+}

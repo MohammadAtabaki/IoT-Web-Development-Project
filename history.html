@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet of Things</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="history.css">
+    <!-----Only edit this sheet (for html on this page)-->
+    <!-----How we get our icons------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div class = "container">
+
+        <div class="header">
+
+            <nav>
+
+                <a href="home.html" class = "logo">
+                    <img src="media/logo.png" alt="company logo">
+                </a>
+
+                <div class="hamburger" id="hamburger-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <ul id="nav-menu">
+                    <li><a href="home.html#about">About</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="future-trends.html">Future Trends</a></li>
+                    <li id="contact"><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </nav>
+                <div class = "slide-out" id="slideout">
+                    <ul>
+                        <li><a href="home.html#about">About</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="future-trends.html">Future Trends</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+            </div>
+        </div>
+
+
+
+
+<!--------Everything above should remain the same, thats for navigation. Below we can edit content within containers------------>
+
+
+
+
+        <div class = "main">
+            <div class= "main">
+                <div class="slogan">
+                    <h1>The History of IoT</h1>
+                    </p>
+                </div>
+            </div>
+                <video autoplay muted loop id="background-video">
+                    <source src="media/earth.mp4" type="video/mp4">
+                </video>
+        </div>
+        
+        
+    
+        
+    <div class= "c1">
+        <div class="art" >
+            <img src="https://cdn.britannica.com/00/192200-050-8847FCB9/key-telegraph-Morse-1860.jpg" class="img"></img>
+            <h1>The First Telograph (1832)</h1>
+        </div>
+    </div>
+        
+    <div class="c2">
+        <div class="art" >
+            <img src="https://d2jf00asb0fe6y.cloudfront.net/invention-telephone_04_b20054c0f0fe0a6da41147c5ba24c437.jpg" class="img"></img>
+            <h1>First Patented Telephone (1876)</h1>
+        </div>
+    </div>
+            
+    <div class="c3" id="AI">
+        <div class="art" >
+            <img src="https://qph.cf2.quoracdn.net/main-qimg-39d9dd143c3797d9ce518d4bbe67aed0" class="img"></img>
+            <h1>The First Mobile Phone (1976)</h1>
+        </div>
+     </div>
+            
+     <div class = 'c4' id="blockchain">
+        <div class="art" >
+            <img src="https://www.livinginternet.com/app/uploads/2020/10/toaster_simon2.jpg" class="img"></img>
+            <h1>The First IoT Device - Romkey Internet Toaster (1990)</h1>
+        </div>
+    </div>
+         
+    <div class="c5" id="healthcare">
+        <div class="art" >
+            <img src="https://miro.medium.com/v2/resize:fit:600/1*t0CcvQlJgwJuUNATfJ1Pbg.jpeg" class="img"></img>
+            <h1>Kevin Ashton Coins the Term (1999)</h1>
+        </div>
+    </div>
+
+    <div class="c6" id="smart">
+        <div class="art" >
+            <img src="https://cdn.britannica.com/51/237151-050-BBAD66F8/Scanning-QR-code-self-checkout-NFC-technology-smartphone.jpg" class="img"></img>
+            <h1>8.4 Billion IoT Devices Used (2017)</h1>
+        </div>
+    </div>
+
+    <!-- Inside your HTML body, usually near the end -->
+    <a href="#top" id="back-to-top-button">&uarr;</a>
+
+
+
+
+    <div class = "footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="media/logo.png" alt="Your Logo">
+            </div>
+            <div class="footer-about">
+                <a href="home.html#about"><h3>About</h3></a>
+            </div>
+            <div class="footer-contact">
+                <a href="contact.html"><h3>Contact</h3></a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+             </div>
+             </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    <script src="script.js"></script>
+        <!-- At the end of your HTML body, before the closing </body> tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var backToTopButton = document.getElementById('back-to-top-button');
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            };
+
+            backToTopButton.onclick = function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            };
+        });
+    </script>
+    
+</body>
+</html>

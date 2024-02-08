@@ -1,0 +1,89 @@
+
+/*----------------------------Main---------------------------------*/
+.slogan {
+    color: white;
+    padding: 30px;
+    margin: 8%;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.slogan h1:hover {
+    font-style: italic;
+}
+
+.images-container {
+    display: flex;
+    justify-content: center; /* This centers our images in the container */
+    gap: 50px; /* This adds space between our images, adjust as needed */
+    margin-right: 5%;
+    margin-left: 5%;
+}
+  
+.image-overlay {
+    cursor: pointer; /* Change the cursor to indicate it's clickable */
+}
+  
+.image-link {
+    text-decoration: none; /* Optional: removes underline from links */
+}
+  
+.image-overlay img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove spacing under the image */
+}
+  
+.overlay-text {
+    position: absolute;
+    width: 100%; /* Make the text span the entire width of the image */
+    bottom: 0; /* Position text at the bottom of the image */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the text */
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Add some padding to the top and bottom */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+  
+.image-overlay:hover .overlay-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.texts-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 50px
+}
+
+#related-content1, #related-content2, #related-content3, #related-content4 {
+    color: white;
+    padding: 15px;
+}
+
+#related-content1 h1:hover, #related-content2 h1:hover, #related-content3 h1:hover, #related-content4 h1:hover {
+    font-style: italic;
+}
+
+.related-content {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+#back-to-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color:  #4E7DA6;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    font-size: bold 20px;
+}

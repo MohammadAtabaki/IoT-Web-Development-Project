@@ -1,0 +1,127 @@
+#back-to-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color:  #4E7DA6;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    font-size: bold 20px;
+}
+
+#back-to-top-button:hover {
+    opacity: 0.8;
+}
+
+#Login_b {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    /*margin-bottom: 20px;*/
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background: #C7CBD1; /* https://colorhunt.co/palette/f5f5f5f0545430475e121212 */
+    color: #C7CBD1;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+form {
+    background-color: #4E7DA6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 20px;
+    align-items: center;
+    margin: 0 auto;
+    
+    
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #C7CBD1;
+    border-radius: 4px;
+    background-color: #C7CBD1;
+}
+
+button {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #353635;
+}
+
+.error-message {
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+
+.contact-header {
+    width:auto;
+    
+    color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.form-container {
+    background-color: #C7CBD1; /* Adjust the background color and opacity */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust the width as needed */
+    margin: 50px auto; /* Center the box horizontally with auto margin */
+}
+
+/* Update the form styles */
+form {
+    width: 95%; /* Update width to 100% to match the container */
+    margin: 10px; /* Remove the margin to align with the container */
+}
+
+/* Add this CSS for the contact form labels and inputs */
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: calc(100% - 16px); /* Adjust width and consider box-sizing */
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #C7CBD1
+}
+
+/* Add this CSS to center the button */
+button {
+    display: block;
+    margin: 0 auto;
+}
